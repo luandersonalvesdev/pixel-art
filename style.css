@@ -1,0 +1,104 @@
+:root {
+
+  --bg-color: #a9c5ff;
+
+  --bg-color-second: #6898ff;
+
+  --bg-btn-clear: #ff807a;
+
+  --bg-btn-colors: #e0d537;
+
+  --bg-btn-generate: #50ce50;
+
+  --black: black;
+
+  --white: white;
+}
+
+* {
+  font-family: Fredoka One, sans-serif;
+}
+
+html {
+  background-image: url('./img/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header #title {
+  font-size: 3rem;
+  opacity: 0.8;
+  margin: 3rem 0 1rem;
+}
+
+header #color-palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .buttons-header {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+header .buttons-header #button-random-color {
+  background-color: var(--bg-color-second);
+}
+
+header .buttons-header #clear-board {
+  background-color: var(--bg-btn-clear);
+}
+
+main .buttons-main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+main .buttons-main #generate-board {
+  background-color: var(--bg-color-second);
+}
+
+main .buttons-main #board-size {
+  text-align: center;
+  margin: 0 1rem;
+  width: 200px;
+  height: 3rem;
+  border-radius: 0.2rem;
+  padding-left: 5px;
+  font-size: 1.3rem;
+  border: 2px solid var(--black);
+}
+
+main #pixel-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color , .pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+.button {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  color: var(--white);
+}
+
+.button:hover , .pixel , .color {
+  cursor: pointer;
+}
