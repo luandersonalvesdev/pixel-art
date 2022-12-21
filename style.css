@@ -44,6 +44,7 @@ header #color-palette {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 45px;
 }
 
 header .buttons-header {
@@ -101,4 +102,11 @@ main #pixel-board {
 
 .button:hover , .pixel , .color {
   cursor: pointer;
+}
+
+.selected {
+  width: 45px;
+  height: 45px;
+  transition-duration: 0.2s;
+  margin: 1px;
 }
