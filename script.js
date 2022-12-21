@@ -43,7 +43,7 @@ const fSaveInputValue = () => {
 }());
 
 // ARRAY DE CORES
-const arrayColors = ['black', 'red', 'green', 'blue', 'yellow', 'brown', 'pink', 'purple', '#7C77B9', '#8FBFE0', '#1D8A99', '#14FFF7', '#26413C', '#03120E', '#FBB02D', '#F3DE2C', '#FB6107', '#A9B3CE', '#7CDEDC', '#474954', '#61C9A8', '#BA3B46', '#4C2C69', '#42253B', '#FFA686', '#AA767C', '#032B43', '#3F88C5', '#E0ACD5', '#111D4A', '#FFF8F0', '#FFCF99', '#DC758F', '#E3D3E4', '#664C43', '#A3A9AA',];
+const arrayColors = ['black', 'red', 'green', 'blue', 'green', 'blue', 'yellow', 'brown', 'pink', 'purple', '#7C77B9', '#8FBFE0', '#1D8A99', '#14FFF7', '#26413C', '#03120E', '#FBB02D', '#F3DE2C', '#FB6107', '#A9B3CE', '#7CDEDC', '#474954', '#61C9A8', '#BA3B46', '#4C2C69', '#42253B', '#FFA686', '#AA767C', '#032B43', '#3F88C5', '#E0ACD5', '#111D4A', '#FFF8F0', '#FFCF99', '#DC758F', '#E3D3E4', '#664C43', '#A3A9AA',];
 
 // CRIANDO AS PALETAS DE CORES
 (function fCreateColorsPalette() {
@@ -111,7 +111,13 @@ getUlColors.addEventListener('click', fColorSelector);
 const fPaintPixels = (e) => {
   Array.from(getUlColors.children).forEach((value) => {
     if (value.classList.contains('selected')) {
-      e.target.style.backgroundColor = value.style.backgroundColor;
+      if (e.target.style.backgroundColor === 'white') {
+        e.target.style.backgroundColor = value.style.backgroundColor;
+      } else if (e.target.style.backgroundColor === value.style.backgroundColor) {
+        e.target.style.backgroundColor = 'white';
+      } else {
+        e.target.style.backgroundColor = value.style.backgroundColor;
+      }
     }
   });
   fSavePixel();
